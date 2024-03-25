@@ -1,5 +1,8 @@
 // Copyright 2021 NNTU-CS
+#include <iostream>
+
 int countPairs1(int *arr, int len, int value) {
+  std::this_thread::sleep_for(std::chrono::milliseconds(13000));
   int i, j, k;
   for (i = 0; i < len - 1; i++) {
     for (j = i + 1; j < len; j++) {
