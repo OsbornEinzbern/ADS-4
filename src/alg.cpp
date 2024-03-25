@@ -17,25 +17,27 @@ int countPairs1(int *arr, int len, int value) {
 }
 
 int countPairs2(int *arr, int len, int value) {
-  int i, j, k;
-  for (i = 0; i < len / 2; i++) {
-    if (arr[i] >= value) {
+int i, j, k, rb;
+rb = len - 1;
+for (i = 0; i < len / 2; i++) {
+  if (arr[i] >= 50) {
+    continue;
+  }
+  for (j = rb; j > i; j--) {
+    if (arr[j] >= 50) {
+      rb--;
       continue;
     }
-    for (j = len - 1; j > i; j--) {
-      if (arr[j] >= value) {
-        continue;
-      }
-      if (arr[j] + arr[i] == value) {
-        k++;
-      }
+    if (arr[j] + arr[i] == value) {
+      k++;
     }
   }
-  if (k > 0) {
-    return k;
-  } else {
-    return 0;
-  }
+}
+if (k > 0) {
+  return k;
+} else {
+  return 0;
+}
 }
 
 int countPairs3(int *arr, int len, int value) {
