@@ -1,10 +1,6 @@
 // Copyright 2021 NNTU-CS
-#include <iostream>
-#include <chrono>
-#include <thread>
 
 int countPairs1(int *arr, int len, int value) {
-  std::this_thread::sleep_for(std::chrono::milliseconds(13000));
   int i, j, k;
   for (i = 0; i < len - 1; i++) {
     for (j = i + 1; j < len; j++) {
@@ -23,11 +19,11 @@ int countPairs1(int *arr, int len, int value) {
 int countPairs2(int *arr, int len, int value) {
   int i, j, k;
   for (i = 0; i < len / 2; i++) {
-    if (arr[i] >= 50) {
+    if (arr[i] >= value) {
       continue;
     }
     for (j = len - 1; j > i; j--) {
-      if (arr[j] >= 50) {
+      if (arr[j] >= value) {
         continue;
       }
       if (arr[j] + arr[i] == value) {
