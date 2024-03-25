@@ -1,6 +1,6 @@
 // Copyright 2021 NNTU-CS
 int countPairs1(int *arr, int len, int value) {
-  uint16_t i, j, k;
+  int i, j, k;
   for (i = 0; i < len - 1; i++) {
     for (j = i + 1; j < len; j++) {
       if (arr[j] + arr[i] == value) {
@@ -16,7 +16,7 @@ int countPairs1(int *arr, int len, int value) {
 }
 
 int countPairs2(int *arr, int len, int value) {
-  uint16_t i, j, k;
+  int i, j, k;
   for (i = 0; i < len / 2; i++) {
     if (arr[i] >= 50) {
       continue;
@@ -38,7 +38,7 @@ int countPairs2(int *arr, int len, int value) {
 }
 
 int countPairs3(int *arr, int len, int value) {
-  uint16_t i, j, index;
+  int i, j, index;
   for (i = 0; i < len - 1; i++) {
     index = i;
     for (j = i + 1; j < len; j++) {
@@ -51,7 +51,7 @@ int countPairs3(int *arr, int len, int value) {
     arr[i] = t;
   }
 
-  uint16_t l, p, k;
+  int l, p, k;
   int rb, lb, fg = 0;
   rb = len;
   lb = 0;
