@@ -17,7 +17,7 @@ int countPairs1(int *arr, int len, int value) {
 
 int countPairs2(int *arr, int len, int value) {
   uint16_t i, j, k;
-  for (i = 0; i < int(len / 2); i++) {
+  for (i = 0; i < len / 2; i++) {
     if (arr[i] >= 50) {
       continue;
     }
@@ -56,7 +56,6 @@ int countPairs3(int *arr, int len, int value) {
   rb = len;
   lb = 0;
   while (fg == 0) {
-    ;
     if ((arr[rb] + arr[lb]) < 50) {
       rb--;
     }
